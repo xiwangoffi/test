@@ -1,0 +1,41 @@
+
+  <section class="d-flex w-100 h-75 flex-column align-items-center">
+    <!-- Création du formulaire. Utilisation de NgForm -->
+    <form class="form w-100" #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="container w-100">
+        <div class="row conteneur w-100">
+          <div class="col-md-4 w-50">
+            <div class="container d-flex w-100 flex-column justify-content-center align-items-center">
+              <div class="card w-50 justify-content-center align-content-center" style="width: 18rem;">
+                <img src="../assets/joueur1_vFinal1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <!-- Choix Joueur 1. Utilisation de NgModel -->
+                  <input required="required" class="form-control" name="Joueur1" id="Joueur1" placeholder="Joueur 1"  ngModel required #first="ngModel">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 w-50">
+            <div class="container d-flex w-100 flex-column justify-content-center align-items-center">
+              <div class="card w-50 justify-content-center align-content-center" style="width: 18rem;">
+                <img src="../assets/joueur2_vFinal2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <!-- Choix Joueur 2. Utilisation de NgModel -->
+                  <input required="required"  class="form-control" id="Joueur2" name="Joueur2" placeholder="Joueur 2" ngModel required #second="ngModel">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row w-100 justify-content-center">
+          <div class="col-auto w-100 justify-content-center">
+             <div class="container d-flex w-50 flex-column justify-content-center align-content-center">
+              <br>
+              <!-- Bouton de validation du formulaire -->
+              <button type="submit" class="btn btn-primary mb-3"><p class="display-6">Confirmez pseudo Joueurs</p></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
